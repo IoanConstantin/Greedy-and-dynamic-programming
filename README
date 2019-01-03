@@ -1,0 +1,33 @@
+Constantin Ioan
+321CC
+					README - TEMA 1
+					---------------
+
+Problema 1 - Frati
+------------------
+-> Pentru fiecare concurs retin tripleta(jocuri,benzi,jocuri+benzi) pe care o sortez initial dupa suma(jocuri+benzi);
+
+-> Parcurg toate concursurile in ordine descrescatoare a sumelor si:
+	
+	-> de fiecare data daca concursul curent are suma diferita de a tuturor celorlalte concursuri, verific cine muta si adaug jocurile curente la suma de jocuri, daca muta Jon, sau benzile curente la suma de benzi, daca muta Sam; 
+
+	-> daca exista mai multe concursuri cu aceeasi suma ca al lui j, pentru fiecare retinem jocurile si benzile aferente, iar apoi pana cand adaugam fiecare concurs intr-una dintre sume, sortam in functie de cine se afla la mutare dupa jocuri, respectiv benzi, adaugam cel mai mare element din vectorul sortat la suma respectiva si stergem intregul concurs(jocuri si benzi) din concursuri;
+
+
+-> Complexitatea algoritmului meu este O(n^2*log(n)), deoarece am un ciclu while care contine un alt ciclu while, iar ciclul while intern contine o sortare care are complexitatea log(n). Pentru a nu depasi timpul la ultimele 3 teste, trebuia sa obtin complexitatea O(n*log(n)).
+
+Problema 2 - Ursi
+-----------------
+-> Numar caracterele '^' din mesaj, iar:
+
+	-> daca numarul caracterelor '^' este impar returnam 0;
+	
+	-> altfel, daca mesajul contine doar caractere '^', atunci 
+	avem recurenta T(n)=T(n-2)*(n-1), cu T(0)=1 care se obtine prin inductie
+	(cu pasul de inductie (n-2)->n), unde n este numarul caracterelor '^'.
+
+Problema 3 - Planificare
+------------------------
+-> Daca suma dintre oricare 2 probe consecutive si pauza dintre ele este mai mare decat durata unui concurs, atunci niciun concurs nu va putea sa contina mai mult de o proba, fiind
+posibila o singura suma.
+
